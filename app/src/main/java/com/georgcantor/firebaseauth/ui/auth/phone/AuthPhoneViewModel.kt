@@ -1,4 +1,4 @@
-package com.georgcantor.firebaseauth.ui.auth
+package com.georgcantor.firebaseauth.ui.auth.phone
 
 import androidx.lifecycle.ViewModel
 

@@ -3,13 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/authFragment">
+    app:startDestination="@id/authPhoneFragment">
 
     <fragment
-        android:id="@+id/authFragment"
-        android:name="com.georgcantor.firebaseauth.ui.auth.AuthPhoneFragment"
-        android:label="IntroFragment"
+        android:id="@+id/authPhoneFragment"
+        android:name="com.georgcantor.firebaseauth.ui.auth.phone.AuthPhoneFragment"
+        android:label="AuthPhoneFragment"
         tools:layout="@layout/fragment_auth_phone">
+        <action
+            android:id="@+id/action_authPhoneFragment_to_authCodeFragment"
+            app:destination="@id/authCodeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authCodeFragment"
+        android:name="com.georgcantor.firebaseauth.ui.auth.code.AuthCodeFragment"
+        android:label="AuthCodeFragment"
+        tools:layout="@layout/fragment_auth_code">
     </fragment>
 
 </navigation>
