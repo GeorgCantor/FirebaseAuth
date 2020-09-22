@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/authFragment"
-        android:name="com.georgcantor.firebaseauth.ui.auth.AuthFragment"
+        android:name="com.georgcantor.firebaseauth.ui.auth.AuthPhoneFragment"
         android:label="IntroFragment"
-        tools:layout="@layout/fragment_auth">
+        tools:layout="@layout/fragment_auth_phone">
     </fragment>
 
 </navigation>

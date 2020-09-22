@@ -1,7 +1,6 @@
 package com.georgcantor.firebaseauth.util
 
-import java.text.DateFormatSymbols
-
 object Constants {
     const val MAIN_STORAGE = "main_storage"
+    const val PHONE_MASK = "+7 ([000]) [000]-[00]-[00]"
 }
