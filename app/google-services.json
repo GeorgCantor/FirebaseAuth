@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "945406623767",
+    "firebase_url": "https://fir-auth-b20ff.firebaseio.com",
+    "project_id": "fir-auth-b20ff",
+    "storage_bucket": "fir-auth-b20ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945406623767:android:15e43c82e0a6e80a1d1c52",
+        "android_client_info": {
+          "package_name": "com.georgcantor.firebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945406623767-ji5a6v7ci6p22uamlamglo1dkhpdk504.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2m8o_ZrAr5PJ0EV5dIGPgsYOT-76tLiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945406623767-ji5a6v7ci6p22uamlamglo1dkhpdk504.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
