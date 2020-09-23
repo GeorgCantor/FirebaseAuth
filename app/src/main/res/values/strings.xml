@@ -4,4 +4,6 @@
     <string name="next">Далее</string>
     <string name="phone_hint">+7</string>
     <string name="sms_code">Код из смс</string>
+    <string name="registration">Регистрация</string>
+    <string name="input_phone">Введите номер телефона</string>
 </resources>
