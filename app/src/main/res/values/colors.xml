@@ -6,4 +6,5 @@
     <color name="gradient_blue">#0289DB</color>
     <color name="gradient_blue_light">#42B3F8</color>
     <color name="black">#000000</color>
+    <color name="color_fio">#303C40</color>
 </resources>

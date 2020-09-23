@@ -8,7 +8,9 @@ import android.view.View.GONE
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.georgcantor.firebaseauth.R
+import com.georgcantor.firebaseauth.util.Constants.USER
 import com.georgcantor.firebaseauth.util.Constants.VERIF_ID
+import com.georgcantor.firebaseauth.util.PreferenceManager
 import com.georgcantor.firebaseauth.util.shortToast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
@@ -54,7 +56,13 @@ class AuthCodeFragment : Fragment(R.layout.fragment_auth_code) {
                 when (task.isSuccessful) {
                     true -> {
                         progress_bar.visibility = GONE
-                        findNavController(this).navigate(R.id.action_authCodeFragment_to_regFragment)
+                        findNavController(this).navigate(
+                            if (PreferenceManager(requireContext()).getUser(USER) != null) {
+                                R.id.action_authCodeFragment_to_profileFragment
+                            } else {
+                                R.id.action_authCodeFragment_to_regFragment
+                            }
+                        )
                     }
                     false -> {
                         progress_bar.visibility = GONE

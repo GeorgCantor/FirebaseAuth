@@ -15,6 +15,10 @@
     <string name="gender">Пол</string>
     <string name="email">E-mail</string>
     <string name="register">Зарегистрироваться</string>
+    <string name="input_all_fields">Заполните все поля</string>
+    <string name="birth_date_format">Дата рождения: %s</string>
+    <string name="gender_format">Пол: %s</string>
+    <string name="email_format">E-mail: %s</string>
 
     <string-array name="genders">
         <item>Мужской</item>

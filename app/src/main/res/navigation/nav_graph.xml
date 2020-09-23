@@ -24,6 +24,9 @@
             android:id="@+id/action_authCodeFragment_to_regFragment"
             app:destination="@id/regFragment"
             app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_authCodeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
 
     <fragment
@@ -31,6 +34,23 @@
         android:name="com.georgcantor.firebaseauth.ui.reg.RegFragment"
         android:label="RegFragment"
         tools:layout="@layout/fragment_reg">
+        <action
+            android:id="@+id/action_regFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.georgcantor.firebaseauth.ui.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_authPhoneFragment"
+            app:destination="@id/authPhoneFragment"
+            app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_profileFragment_to_regFragment"
+            app:destination="@id/regFragment" />
     </fragment>
 
 </navigation>
