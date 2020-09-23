@@ -1,11 +1,13 @@
-package com.georgcantor.firebaseauth.ui.auth.phone
+package com.georgcantor.firebaseauth.ui.auth
 
 import android.os.Bundle
 import android.view.View
 import android.view.View.GONE
+import android.view.View.VISIBLE
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.georgcantor.firebaseauth.R
+import com.georgcantor.firebaseauth.util.Constants.VERIF_ID
 import com.georgcantor.firebaseauth.util.setMaskListener
 import com.georgcantor.firebaseauth.util.shortToast
 import com.georgcantor.firebaseauth.util.showKeyboard
@@ -35,6 +37,7 @@ class AuthPhoneFragment : Fragment(R.layout.fragment_auth_phone) {
         next_btn.setOnClickListener {
             phone_edit_text.text.toString().apply {
                 if (isNotBlank()) {
+                    progress_bar.visibility = VISIBLE
                     sendVerificationCode(this)
                 } else {
                     phone_input_view.error = getString(R.string.input_phone)
@@ -54,12 +57,16 @@ class AuthPhoneFragment : Fragment(R.layout.fragment_auth_phone) {
 
         override fun onVerificationFailed(e: FirebaseException) {
             progress_bar.visibility = GONE
+            phone_input_view.error = getString(R.string.wrong_phone)
             context?.shortToast(e.message)
         }
 
         override fun onCodeSent(verificationId: String, token: ForceResendingToken) {
             progress_bar.visibility = GONE
-            findNavController(this@AuthPhoneFragment).navigate(R.id.action_authPhoneFragment_to_authCodeFragment)
+            findNavController(this@AuthPhoneFragment).navigate(
+                R.id.action_authPhoneFragment_to_authCodeFragment,
+                Bundle().apply { putString(VERIF_ID, verificationId) }
+            )
         }
     }
 }

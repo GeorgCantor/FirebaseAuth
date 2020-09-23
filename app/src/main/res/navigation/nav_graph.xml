@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/authPhoneFragment"
-        android:name="com.georgcantor.firebaseauth.ui.auth.phone.AuthPhoneFragment"
+        android:name="com.georgcantor.firebaseauth.ui.auth.AuthPhoneFragment"
         android:label="AuthPhoneFragment"
         tools:layout="@layout/fragment_auth_phone">
         <action
@@ -17,9 +17,20 @@
 
     <fragment
         android:id="@+id/authCodeFragment"
-        android:name="com.georgcantor.firebaseauth.ui.auth.code.AuthCodeFragment"
+        android:name="com.georgcantor.firebaseauth.ui.auth.AuthCodeFragment"
         android:label="AuthCodeFragment"
         tools:layout="@layout/fragment_auth_code">
+        <action
+            android:id="@+id/action_authCodeFragment_to_regFragment"
+            app:destination="@id/regFragment"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/regFragment"
+        android:name="com.georgcantor.firebaseauth.ui.reg.RegFragment"
+        android:label="RegFragment"
+        tools:layout="@layout/fragment_reg">
     </fragment>
 
 </navigation>
