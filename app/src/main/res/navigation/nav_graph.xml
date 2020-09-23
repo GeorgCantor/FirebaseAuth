@@ -26,7 +26,8 @@
             app:popUpTo="@id/nav_graph" />
         <action
             android:id="@+id/action_authCodeFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/nav_graph" />
     </fragment>
 
     <fragment

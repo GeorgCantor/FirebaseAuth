@@ -16,6 +16,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         super.onViewCreated(view, savedInstanceState)
 
         val manager = PreferenceManager(requireContext())
+        manager.saveBoolean(IS_LOGGED_IN, true)
 
         val user = manager.getUser(USER)
         fio.text = user?.fio
