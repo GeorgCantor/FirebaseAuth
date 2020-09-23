@@ -9,4 +9,15 @@
     <string name="registration">Регистрация</string>
     <string name="input_phone">Введите номер телефона</string>
     <string name="input_code">Введите код</string>
+
+    <string name="fio">Фамилия Имя Отчество</string>
+    <string name="birth_date">Дата рождения</string>
+    <string name="gender">Пол</string>
+    <string name="email">E-mail</string>
+    <string name="register">Зарегистрироваться</string>
+
+    <string-array name="genders">
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
 </resources>
